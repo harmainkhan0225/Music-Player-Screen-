@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: lightgray;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.music-player {
+    width: 100%;
+    max-width: 390px;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 18px;
+    background-color: #181818;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+}
+
+/* Top Bar */
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 38px;
+    flex-shrink: 0;
+}
+
+.top-bar h1 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.back-button,
+.menu-button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    width: 35px;
+}
+
+/* Album Picture */
+
+.album-area {
+    flex-grow: 1;
+    flex-basis: 100px;
+    min-height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-cover {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px #00000080;
+}
+
+/* Song Details */
+
+.song-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-basis: 55px;
+    flex-shrink: 0;
+}
+
+.song-info {
+    min-width: 0;
+}
+
+.song-info h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.song-info p {
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+.heart-button {
+    background: none;
+    border: none;
+    color: #1ed760;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* Progress Bar */
+
+.song-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex-basis: 30px;
+    flex-shrink: 0;
+}
+
+.progress-track {
+    height: 4px;
+    width: 100%;
+    background-color: #555555;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    display: block;
+    width: 36%;
+    height: 100%;
+    background-color: #1ed760;
+    border-radius: 10px;
+}
+
+.time-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #aaaaaa;
+    font-size: 11px;
+}
+
+/* Five Control Buttons */
+
+.player-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-basis: 55px;
+    flex-shrink: 0;
+}
+
+.control-button,
+.play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.control-button {
+    width: 38px;
+    height: 38px;
+    background-color: #292929;
+    color: white;
+    font-size: 17px;
+}
+
+.play-button {
+    width: 54px;
+    height: 54px;
+    background-color: #1ed760;
+    color: black;
+    font-size: 21px;
+}
+
+/* Up Next List */
+
+.up-next {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-basis: 155px;
+    flex-shrink: 0;
+}
+
+.up-next h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.next-song {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.next-song img {
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.next-song-info {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.next-song-info h4 {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.next-song-info p {
+    color: #aaaaaa;
+    font-size: 11px;
+}
+
+.song-duration {
+    font-size: 11px;
+    color: #aaaaaa;
+    flex-shrink: 0;
+}
+
+/* Smaller Screens */
+
+@media (max-height: 700px) {
+    .music-player {
+        gap: 9px;
+        padding: 12px;
+    }
+
+    .album-cover {
+        max-width: 190px;
+    }
+
+    .up-next {
+        gap: 6px;
+    }
+
+    .next-song img {
+        width: 35px;
+        height: 35px;
+    }
+}

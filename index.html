@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main class="music-player">
+
+        <header class="top-bar">
+            <button class="back-button" aria-label="Go back">&lt;</button>
+            <h1>Now Playing</h1>
+            <button class="menu-button" aria-label="Menu">⋮</button>
+        </header>
+
+        <section class="album-area" aria-label="Album artwork">
+            <img
+                class="album-cover"
+                src="https://i.audiomack.com/fareed-ayaz-abu-muhammad-qawwal/394e253dd2.webp"
+                alt="Night sky and mountains album artwork"
+            >
+        </section>
+
+        <section class="song-details">
+            <section class="song-info">
+                <h2>Piya Ghar Aaya</h2>
+                <p>Nusrat Fateh Ali Khan</p>
+            </section>
+            <button class="heart-button" aria-label="Add to favorites">♥</button>
+        </section>
+
+        <section class="song-progress" aria-label="Song progress">
+            <div class="progress-track">
+                <span class="progress-fill"></span>
+            </div>
+            <div class="time-labels">
+                <span>1:20</span>
+                <span>3:45</span>
+            </div>
+        </section>
+
+        <nav class="player-controls" aria-label="Music controls">
+            <button class="control-button" aria-label="Shuffle">⤨</button>
+            <button class="control-button" aria-label="Previous song">◀|</button>
+            <button class="play-button" aria-label="Play">▶</button>
+            <button class="control-button" aria-label="Next song">|▶</button>
+            <button class="control-button" aria-label="Repeat">⟳</button>
+        </nav>
+
+        <section class="up-next">
+            <h3>Up Next</h3>
+
+            <article class="next-song">
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=100"
+                    alt=""
+                >
+                <section class="next-song-info">
+                    <h4>Afreen Afreen</h4>
+                    <p>Nusrat Fateh Ali Khan</p>
+                </section>
+                <span class="song-duration">5:10</span>
+            </article>
+
+            <article class="next-song">
+                <img
+                    src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100"
+                    alt=""
+                >
+                <section class="next-song-info">
+                    <h4>Sochta Hoon</h4>
+                    <p>Nusrat Fateh Ali Khan</p>
+                </section>
+                <span class="song-duration">6:25</span>
+            </article>
+
+            <article class="next-song">
+                <img
+                    src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=100"
+                    alt=""
+                >
+                <section class="next-song-info">
+                    <h4>Allah Hoo</h4>
+                    <p>Nusrat Fateh Ali Khan</p>
+                </section>
+                <span class="song-duration">7:12</span>
+            </article>
+        </section>
+
+    </main>
+
+</body>
+</html>
